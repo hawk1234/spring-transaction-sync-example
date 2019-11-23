@@ -28,7 +28,7 @@ public class EmailDistributionService {
         return toSend.size();
     }
 
-    private boolean trySend(PersonEmail personEmail){
+    boolean trySend(PersonEmail personEmail){
         try {
             sendEmailService.send(personEmail);
             personEmail.setEmailSent(true);
